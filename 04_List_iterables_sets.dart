@@ -8,4 +8,10 @@ void main() {
   print('Reversed List ${numbers.reversed}');
 
   final reversedNumbers = numbers.reversed;
+  print('Iterable: $reversedNumbers');
+  print('List: ${reversedNumbers.toList()}');
+  print('List: ${reversedNumbers.toSet()}');
+
+  final numbersGreaterThanFive = numbers.where((element) => (element > 5));
+  print(numbersGreaterThanFive);
 }
