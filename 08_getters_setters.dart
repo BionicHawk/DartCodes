@@ -1,5 +1,5 @@
 void main() {
-  final mySquare = Square(side: 10.0);
+  final mySquare = Square(side: -10.0);
   mySquare.side = -5.0;
   print('Square area is ${mySquare.calculateArea()} units');
 }
@@ -7,7 +7,9 @@ void main() {
 class Square {
   double _side; //side  * side
 
-  Square({required side}) : _side = side;
+  Square({required side})
+      : assert(side >= 0, 'side must be greater or equal to 0'),
+        _side = side;
 
   double get area {
     return _side * _side;
