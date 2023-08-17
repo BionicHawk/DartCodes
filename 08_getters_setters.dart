@@ -1,5 +1,3 @@
-import 'dart:html';
-
 void main() {
   final mySquare = Square(side: -10.0);
   mySquare.side = -5.0;
